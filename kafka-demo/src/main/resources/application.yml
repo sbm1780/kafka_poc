@@ -1,0 +1,17 @@
+server:
+  port: 8087
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: "localhost:9092"
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
+      #value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+    consumer:
+      bootstrap-servers: "localhost:9092"
+      group-id: "spring-boot-kafka-consumer"
+
+
+topic:
+  name: "test.topic.t2"
